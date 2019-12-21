@@ -38,5 +38,4 @@ async function dataPrompt () {
     const gitHubData = await axios.get(`https://api.github.com/users/${gitHubUserName.username}`);
 
     return gitHubData;
-}
-
+    }
