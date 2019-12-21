@@ -6,7 +6,7 @@ var generateHTML = function(colorData, data) {
               <title>Github Profile</title>
           </head>
           <body>
-              <h1> <span style="color:`+colorData+`">` + username + `</span></h1>
+              <h1> <span style="color:`+colorData+`">` + data.data.name + `</span></h1>
               <hr>
               <img src="`+data.data.avatar_url+`" alt="profilepic">
               <br>
@@ -14,7 +14,7 @@ var generateHTML = function(colorData, data) {
               <br>
               Company: ` + data.data.company + `
               <br>
-              Repo URL: <a href="`+response.data.html_url+`">`+username+`</a>
+              Repo URL: <a href="`+data.data.html_url+`">`+data.data.login+`</a>
               <br>
               Public Repos: `+ data.data.public_repos +` 
               <br>
