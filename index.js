@@ -29,3 +29,14 @@ return inquirer.prompt([
     },
 ])
 
+async function dataPrompt () {
+    const gitHubUserName = await inquirer.prompt({
+    type: "input", 
+    message:"What's your GitHub username?", 
+    name: "username"})
+   
+    const gitHubData = await axios.get(`https://api.github.com/users/${gitHubUserName.username}`);
+
+    return gitHubData;
+}
+
